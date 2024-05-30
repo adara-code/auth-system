@@ -1,0 +1,53 @@
+{% load rest_framework %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+  <title>Authentication Login</title>
+</head>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand me-auto" href="#">Authentication</a>
+  </div>
+</nav>
+
+<body style="background-color: whitesmoke;">
+  <h3 class=" text-center mt-4 mb-4">Login Page</h3>
+  <div class="container" style="width: 350px">
+    <form action="{% url 'login' %}" method="POST" autocomplete="off" novalidate>
+      {% csrf_token %}
+      {% render_form serializer %}
+      <div>
+        {% if error %}
+        <p style="color: #DC143C;">{{ error.error }}</p>
+        {% endif %}
+      </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div>
+      <p class=" text-center mt-3">Don't have an account? <a href="/signup">Signup here</a></p>
+    </div>
+  </div>
+
+  
+  
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
