@@ -3,11 +3,15 @@ An app that verifies an individual's identity using their login details.
 
 Click on [Django Auth System](https://django-auth-system.onrender.com) to interact with the deployed app.
 
+
+
 ### Tech Stack
 - Python 3.12
 - Django 5.0
 - Django Rest Framework 3.15
 - PostgreSQL 16
+
+
 
 ### Launch Project
 Clone and install the project to your local machine.
