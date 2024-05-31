@@ -13,16 +13,14 @@ Click on [Django Auth System](https://django-auth-system.onrender.com) to intera
 Clone and install the project to your local machine.
 
 ```
-bash
-cd ~
-mkdir django-auth-project
-cd django-auth-project
-pipenv shell
-pipenv install
-git clone https://github.com/adara-code/auth-system
-cd authentication 
-pip install -r requirements.txt
-```
+$ cd ~
+$ mkdir django-auth-project
+$ cd django-auth-project
+$ pipenv shell
+$ pipenv install
+$ git clone https://github.com/adara-code/auth-system
+$ cd authentication 
+$ pip install -r requirements.txt
 ```
 
 Navigate to pgAdmin and create a new database
@@ -43,11 +41,11 @@ DATABASES = {
 ```
 
 Open terminal
+
 ```
-bash
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py runserver
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
+$ python3 manage.py runserver
 ```
 
 
